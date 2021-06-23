@@ -137,7 +137,7 @@ def bot_help(update, context):
 
 /{BotCommands.SpeedCommand}: Check Internet Speed of the Host
 
-/{BotCommands.MediaInfoCommand}: Get detailed info about replied media (Only for Telegram file).
+/{BotCommands.MediaInfo2Command}: Get detailed info about replied media (Only for Telegram file).
 
 /{BotCommands.ShellCommand}: Run commands in Shell (Terminal).
 
@@ -171,7 +171,7 @@ def bot_help(update, context):
 
 /{BotCommands.SpeedCommand}: Check Internet Speed of the Host
 
-/{BotCommands.MediaInfoCommand}: Get detailed info about replied media (Only for Telegram file).
+/{BotCommands.MediaInfo2Command}: Get detailed info about replied media (Only for Telegram file).
 
 /tshelp: Get help for Torrent search module.
 '''
@@ -197,10 +197,10 @@ BotCommand(f'{BotCommands.List2Command}',' [query] Searches files in Drive'),
 BotCommand(f'{BotCommands.StatusCommand}','Get Mirror Status message'),
 BotCommand(f'{BotCommands.StatsCommand}','Bot Usage Stats'),
 BotCommand(f'{BotCommands.HelpCommand}','Get Detailed Help'),
-BotCommand(f'{BotCommands.MediaInfoCommand}','Get detailed info about replied media'),
+BotCommand(f'{BotCommands.MediaInfo2Command}','Get detailed info about replied media'),
 BotCommand(f'{BotCommands.SpeedCommand}','Check Speed of the host'),
 BotCommand(f'{BotCommands.LogCommand}','Bot Log [owner/sudo only]'),
-BotCommand(f'{BotCommands.RestartCommand}','Restart bot [owner/sudo only]')]
+BotCommand(f'{BotCommands.Restart2Command}','Restart bot [owner/sudo only]')]
 
 
 
@@ -217,7 +217,7 @@ def main():
     start_handler = CommandHandler(BotCommands.StartCommand, start, run_async=True)
     ping_handler = CommandHandler(BotCommands.PingCommand, ping,
                                   filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
-    restart_handler = CommandHandler(BotCommands.RestartCommand, restart,
+    restart_handler = CommandHandler(BotCommands.Restart2Command, restart,
                                      filters=CustomFilters.owner_filter | CustomFilters.sudo_user, run_async=True)
     help_handler = CommandHandler(BotCommands.HelpCommand,
                                   bot_help, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
