@@ -1,6 +1,6 @@
 class _BotCommands:
     def __init__(self):
-        self.Start2Command = 'start'
+        self.StartCommand = 'start'
         self.Mirror2Command = 'mirror'
         self.UnzipMirror2Command = 'unzipmirror'
         self.TarMirror2Command = 'tarmirror'
