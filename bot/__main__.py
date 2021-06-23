@@ -95,25 +95,25 @@ def bot_help(update, context):
 
 /{BotCommands.Mirror2Command} [download_url][magnet_link]: Start mirroring the link to Google Drive.
 
-/{BotCommands.UnzipMirrorCommand} [download_url][magnet_link]: Starts mirroring and if downloaded file is any archive, extracts it to Google Drive
+/{BotCommands.UnzipMirror2Command} [download_url][magnet_link]: Starts mirroring and if downloaded file is any archive, extracts it to Google Drive
 
-/{BotCommands.TarMirrorCommand} [download_url][magnet_link]: Start mirroring and upload the archived (.tar) version of the download
+/{BotCommands.TarMirror2Command} [download_url][magnet_link]: Start mirroring and upload the archived (.tar) version of the download
 
-/{BotCommands.CloneCommand}: Copy file/folder to Google Drive
+/{BotCommands.Clone2Command}: Copy file/folder to Google Drive
 
-/{BotCommands.CountCommand}: Count file/folder of Google Drive Links
+/{BotCommands.Count2Command}: Count file/folder of Google Drive Links
 
-/{BotCommands.DeleteCommand} [link]: Delete file from Google Drive (Only Owner & Sudo)
+/{BotCommands.Delete2Command} [link]: Delete file from Google Drive (Only Owner & Sudo)
 
-/{BotCommands.WatchCommand} [youtube-dl supported link]: Mirror through youtube-dl. Click /{BotCommands.WatchCommand} for more help.
+/{BotCommands.Watch2Command} [youtube-dl supported link]: Mirror through youtube-dl. Click /{BotCommands.WatchCommand} for more help.
 
-/{BotCommands.TarWatchCommand} [youtube-dl supported link]: Mirror through youtube-dl and tar before uploading
+/{BotCommands.TarWatch2Command} [youtube-dl supported link]: Mirror through youtube-dl and tar before uploading
 
-/{BotCommands.CancelMirror}: Reply to the message by which the download was initiated and that download will be cancelled
+/{BotCommands.CancelMirror2}: Reply to the message by which the download was initiated and that download will be cancelled
 
 /{BotCommands.StatusCommand}: Shows a status of all the downloads
 
-/{BotCommands.ListCommand} [search term]: Searches the search term in the Google Drive, if found replies with the link
+/{BotCommands.List2Command} [search term]: Searches the search term in the Google Drive, if found replies with the link
 
 /{BotCommands.StatsCommand}: Show Stats of the machine the bot is hosted on
 
@@ -147,25 +147,25 @@ def bot_help(update, context):
     help_string = f'''
 /{BotCommands.HelpCommand}: To get this message
 
-/{BotCommands.MirrorCommand} [download_url][magnet_link]: Start mirroring the link to Google Drive.
+/{BotCommands.Mirror2Command} [download_url][magnet_link]: Start mirroring the link to Google Drive.
 
-/{BotCommands.UnzipMirrorCommand} [download_url][magnet_link]: Starts mirroring and if downloaded file is any archive, extracts it to Google Drive
+/{BotCommands.UnzipMirror2Command} [download_url][magnet_link]: Starts mirroring and if downloaded file is any archive, extracts it to Google Drive
 
-/{BotCommands.TarMirrorCommand} [download_url][magnet_link]: Start mirroring and upload the archived (.tar) version of the download
+/{BotCommands.TarMirror2Command} [download_url][magnet_link]: Start mirroring and upload the archived (.tar) version of the download
 
-/{BotCommands.CloneCommand}: Copy file/folder to Google Drive
+/{BotCommands.Clone2Command}: Copy file/folder to Google Drive
 
-/{BotCommands.CountCommand}: Count file/folder of Google Drive Links
+/{BotCommands.Count2Command}: Count file/folder of Google Drive Links
 
-/{BotCommands.WatchCommand} [youtube-dl supported link]: Mirror through youtube-dl. Click /{BotCommands.WatchCommand} for more help.
+/{BotCommands.Watch2Command} [youtube-dl supported link]: Mirror through youtube-dl. Click /{BotCommands.WatchCommand} for more help.
 
-/{BotCommands.TarWatchCommand} [youtube-dl supported link]: Mirror through youtube-dl and tar before uploading
+/{BotCommands.TarWatch2Command} [youtube-dl supported link]: Mirror through youtube-dl and tar before uploading
 
-/{BotCommands.CancelMirror}: Reply to the message by which the download was initiated and that download will be cancelled
+/{BotCommands.CancelMirror2}: Reply to the message by which the download was initiated and that download will be cancelled
 
 /{BotCommands.StatusCommand}: Shows a status of all the downloads
 
-/{BotCommands.ListCommand} [search term]: Searches the search term in the Google Drive, if found replies with the link
+/{BotCommands.List2Command} [search term]: Searches the search term in the Google Drive, if found replies with the link
 
 /{BotCommands.StatsCommand}: Show Stats of the machine the bot is hosted on
 
@@ -183,17 +183,17 @@ def bot_help(update, context):
 
 
 botcmds = [
-BotCommand(f'{BotCommands.MirrorCommand}', 'Start Mirroring'),
-BotCommand(f'{BotCommands.TarMirrorCommand}','Upload tar (zipped) file'),
-BotCommand(f'{BotCommands.UnzipMirrorCommand}','Extract files'),
-BotCommand(f'{BotCommands.CloneCommand}','Copy file/folder to Drive'),
-BotCommand(f'{BotCommands.CountCommand}','Count file/folder of Drive link'),
-BotCommand(f'{BotCommands.WatchCommand}','Mirror YT-DL support link'),
-BotCommand(f'{BotCommands.TarWatchCommand}','Mirror Youtube playlist link as tar'),
-BotCommand(f'{BotCommands.CancelMirror}','Cancel a task'),
-BotCommand(f'{BotCommands.CancelAllCommand}','Cancel all tasks'),
-BotCommand(f'{BotCommands.DeleteCommand}','Delete file from Drive'),
-BotCommand(f'{BotCommands.ListCommand}',' [query] Searches files in Drive'),
+BotCommand(f'{BotCommands.Mirror2Command}', 'Start Mirroring'),
+BotCommand(f'{BotCommands.TarMirror2Command}','Upload tar (zipped) file'),
+BotCommand(f'{BotCommands.UnzipMirror2Command}','Extract files'),
+BotCommand(f'{BotCommands.Clone2Command}','Copy file/folder to Drive'),
+BotCommand(f'{BotCommands.Count2Command}','Count file/folder of Drive link'),
+BotCommand(f'{BotCommands.Watch2Command}','Mirror YT-DL support link'),
+BotCommand(f'{BotCommands.TarWatch2Command}','Mirror Youtube playlist link as tar'),
+BotCommand(f'{BotCommands.CancelMirror2}','Cancel a task'),
+BotCommand(f'{BotCommands.CancelAll2Command}','Cancel all tasks'),
+BotCommand(f'{BotCommands.Delete2Command}','Delete file from Drive'),
+BotCommand(f'{BotCommands.List2Command}',' [query] Searches files in Drive'),
 BotCommand(f'{BotCommands.StatusCommand}','Get Mirror Status message'),
 BotCommand(f'{BotCommands.StatsCommand}','Bot Usage Stats'),
 BotCommand(f'{BotCommands.HelpCommand}','Get Detailed Help'),
@@ -201,6 +201,7 @@ BotCommand(f'{BotCommands.MediaInfoCommand}','Get detailed info about replied me
 BotCommand(f'{BotCommands.SpeedCommand}','Check Speed of the host'),
 BotCommand(f'{BotCommands.LogCommand}','Bot Log [owner/sudo only]'),
 BotCommand(f'{BotCommands.RestartCommand}','Restart bot [owner/sudo only]')]
+
 
 
 def main():
